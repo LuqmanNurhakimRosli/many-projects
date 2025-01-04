@@ -1,7 +1,10 @@
-import React from 'react'
-
+import { FaInstagram } from "react-icons/fa"
 function App() {
-  return <div>Hello World</div>
+  return (
+    <div>
+      <FaInstagram />
+    </div>
+  )
 }
 
 export default App
