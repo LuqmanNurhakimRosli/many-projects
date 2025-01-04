@@ -1,11 +1,14 @@
 import { FaInstagram } from "react-icons/fa"
 import Button from "./Components/Button"
+
 function App() {
   return (
-    <div>
-      <Button>
-        <FaInstagram onClick={() => alert('Coming soon...')} />
-        <span>Instagram</span>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Button onClick={() => alert('Coming soon...')} >
+        <FaInstagram 
+          className="text-xl hover:text-pink-500 transition-colors" 
+        />
+        <span className="ml-2">Instagram</span>
       </Button>
     </div>
   )
