@@ -12,12 +12,12 @@ button.button-success {
     color: white;
 }
 
-button.button-waring {
-    background-color: yellow;
+button.button-warning {
+    background-color: pink;
     color: black;
 }
 button.button-danger {
-    background-color: red;
+    background-color: blue;
     color: white;
 }
 
