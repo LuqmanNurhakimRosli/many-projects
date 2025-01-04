@@ -7,6 +7,17 @@ button.button-lg {
     padding: 30px 40px;
 }
 
-.green {
-    color: green;
+button.button-success {
+    background-color: green;
+    color: white;
 }
+
+button.button-waring {
+    background-color: yellow;
+    color: black;
+}
+button.button-danger {
+    background-color: red;
+    color: white;
+}
+
