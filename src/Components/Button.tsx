@@ -5,10 +5,10 @@ interface ButtonProps {
   onClick?: () => void
 }
 
-function Button({ children, onClick }: ButtonProps) {
+function Button({ children, ...rest }) {
   return (
     <button 
-      onClick={onClick}
+      {...rest}
       className="flex items-center px-4 py-2 bg-white rounded-lg shadow hover:shadow-md"
     >
       {children}

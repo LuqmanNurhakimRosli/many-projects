@@ -4,7 +4,7 @@ import Button from "./Components/Button"
 function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <Button onClick={() => alert('Coming soon...')} >
+      <Button style={{color:'green'}} onClick={() => alert('Coming soon...')} >
         <FaInstagram 
           className="text-xl hover:text-pink-500 transition-colors" 
         />
