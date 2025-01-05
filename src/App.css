@@ -1,23 +1,76 @@
-button.button-sm {
-    padding: 7px 11px;
-    font-size: 12px;
+* {
+    box-sizing: border-box;
 }
 
-button.button-lg {
-    padding: 30px 40px;
+:root {
+    --navy: #1F2937;
+    --pink: #DA6AEC;
+    --red: #F43F5E;
+    --blue: #2F74DC;
+    --green: #22CD90;
 }
 
-button.button-success {
-    background-color: green;
+body {
+    background-color: #2F2F2F;
+}
+
+.avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .3rem solid white;
+}
+
+.avatar > img {
+    width: 100%;
+}
+
+.avatar-letters {
+    background-color: #F43F5E;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Karla', sans-serif;
 }
 
-button.button-warning {
-    background-color: pink;
-    color: black;
+.avatar-icon {
+    background-color: var(--navy);
 }
-button.button-danger {
-    background-color: blue;
-    color: white;
+
+.avatar > svg {
+    height: 100%;
+    width: 100%;
+    transform: translateY(20px);
+    color: whitesmoke;
+}
+
+/*
+Classes below will help with rendering random 
+background colors for the extra credit
+*/
+.navy {
+    background-color: #1F2937;
+}
+
+.pink {
+    background-color: #DA6AEC;
+}
+
+.red {
+    background-color: #F43F5E;
+}
+
+.blue {
+    background-color: #2F74DC;
+}
+
+.green {
+    background-color: #22CD90;
 }
 

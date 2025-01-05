@@ -1,8 +1,8 @@
 
-function Avatar() {
+function Avatar({src, alt, children}) {
   return (
     <div>
-      
+     
     </div>
   )
 }
