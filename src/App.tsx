@@ -20,7 +20,7 @@ function App() {
       </Button>
       <Button size='lg'  variant='danger'>
       <CiFacebook 
-        />
+        /> 
         <span className="ml-2">Facebook</span>
       </Button>
     </div>
