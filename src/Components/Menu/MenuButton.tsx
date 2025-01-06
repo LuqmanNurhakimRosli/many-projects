@@ -1,4 +1,5 @@
 import Button from "../Button"
+import React from "react"
 
 function MenuButton({children, toggle}: {children: React.ReactNode, toggle: () => void}) {
   return (
