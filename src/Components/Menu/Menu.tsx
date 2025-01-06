@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 
 function Menu({children}: {children: React.ReactNode}) {
 const [open, setOpen] = useState(true)
@@ -18,5 +18,7 @@ function toggle() {
     </div>
   )
 }
+
+
 
 export default Menu

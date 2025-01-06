@@ -3,12 +3,13 @@ import MenuItem from "./Components/Menu/MenuItem"
 import Menu from "./Components/Menu/Menu"
 import MenuDropdown from "./Components/Menu/MenuDropDown"
 import MenuButton from "./Components/Menu/MenuButton"
+import { ThemeProvider } from './Components/ThemeContext'
 
 import './App.css'
 function App() {
   const sports = ['Football', 'Basketball', 'Tennis', 'Golf', 'Hockey']
   return (
-    <>
+    <ThemeProvider>
       <Menu>
       <MenuButton>Sports</MenuButton>
       <MenuDropdown>
@@ -23,7 +24,7 @@ function App() {
       <Avatar>Marketing</Avatar>
       <br/>
       <Avatar  />
-    </>
+    </ThemeProvider>
   )
 }
 
