@@ -4,7 +4,6 @@ interface AvatarProps {
   src?: string
   alt?: string
   children?: React.ReactNode
-  size?: 'sm' | 'md' | 'lg'
 }
 
 function Avatar({ src, alt, children }: AvatarProps) {
