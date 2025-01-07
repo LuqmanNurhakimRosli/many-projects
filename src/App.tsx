@@ -20,6 +20,8 @@ function App() {
       </MenuDropdown>
     </Menu>
 
+    
+
       <Avatar src='../public/img/marketing_bg.jpg' alt='marketing_bg' />
       <br/>
       <Avatar>Marketing</Avatar>
