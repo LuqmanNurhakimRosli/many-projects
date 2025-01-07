@@ -1,3 +1,4 @@
+import React from "react"
 import Avatar from "./Components/Avatar"
 import MenuItem from "./Components/Menu/MenuItem"
 import Menu from "./Components/Menu/Menu"
@@ -6,6 +7,7 @@ import MenuButton from "./Components/Menu/MenuButton"
 import './App.css'
 import Header from "./Components/Header"
 import ButtonContext from "./Components/ButtonContext"
+
 
 const ThemeContext = React.createContext()
 
@@ -21,33 +23,27 @@ function App() {
 
 
   return (
-    <>
-      <ThemeContext.Provider value={{value, toggleTheme }} >
-          <div className={`$(theme)-theme`} >
-            <Header />
-            <ButtonContext />
-          </div>
-      </ThemeContext.Provider>
-
-      <Menu>
-      <MenuButton>Sports</MenuButton>
-      <MenuDropdown>
-        {sports.map(sport => (
-          <MenuItem key={sport}>{sport}</MenuItem>
-        ))}
-      </MenuDropdown>
-    </Menu>
-
-    
-
-      <Avatar src='../public/img/marketing_bg.jpg' alt='marketing_bg' />
-      <br/>
-      <Avatar>Marketing</Avatar>
-      <br/>
-      <Avatar  />
-    </>
-  )
-}
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className={`${theme}-theme`}>
+        <Header />
+        <ButtonContext />
+        <Menu>
+          <MenuButton>Sports</MenuButton>
+          <MenuDropdown>
+            {sports.map((sport) => (
+              <MenuItem key={sport}>{sport}</MenuItem>
+            ))}
+          </MenuDropdown>
+        </Menu>
+        <Avatar src='/img/marketing_bg.jpg' alt='marketing_bg' />
+        <br />
+        <Avatar>Marketing</Avatar>
+        <br />
+        <Avatar />
+      </div>
+    </ThemeContext.Provider>
+      )
+    }
 
 export default App
 export { ThemeContext }
