@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -8,12 +10,23 @@
     --red: #F43F5E;
     --blue: #2F74DC;
     --green: #22CD90;
+
+    /* Theme Variables */
+    --light-bg: #F0F9FF;
+    --light-text: #0C4A6E;
+    --light-header-bg: #E0F2FE;
+
+    --dark-bg: #0C4A6E;
+    --dark-text: #F0F9FF;
+    --dark-header-bg: #075985;
 }
 
 body {
     background-color: #2F2F2F;
+    font-family: 'Karla', sans-serif;
 }
 
+/* Avatar Styles */
 .avatar {
     height: 150px;
     width: 150px;
@@ -22,24 +35,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: .3rem solid white;
+    border: 0.3rem solid white;
 }
 
 .avatar > img {
     width: 100%;
 }
 
-.avatar-letters {
-    background-color: #F43F5E;
+.avatar--letters {
+    background-color: var(--red);
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 2.5rem;
-    font-family: 'Karla', sans-serif;
 }
 
-.avatar-icon {
+.avatar--icon {
     background-color: var(--navy);
 }
 
@@ -50,44 +59,18 @@ body {
     color: whitesmoke;
 }
 
-/*
-Classes below will help with rendering random 
-background colors for the extra credit
-*/
-.navy {
-    background-color: #1F2937;
+/* Theme Classes */
+.light-theme {
+    background-color: var(--light-bg);
+    color: var(--light-text);
 }
 
-.pink {
-    background-color: #DA6AEC;
+.dark-theme {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
 }
 
-.red {
-    background-color: #F43F5E;
-}
-
-.blue {
-    background-color: #2F74DC;
-}
-
-.green {
-    background-color: #22CD90;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding-left: 0;
-}
-
-.container {
-    height: 100vh;
-    /* padding-left: 1rem; */
-}
-
+/* Header Styles */
 header {
     height: 6rem;
     display: flex;
@@ -96,35 +79,18 @@ header {
 }
 
 header.light-theme {
-    background-color: #E0F2FE;
-    color: #0C4A6E;
+    background-color: var(--light-header-bg);
 }
 
 header.dark-theme {
-    background-color: #075985;
-    color: #E0F2FE;
-    
+    background-color: var(--dark-header-bg);
 }
 
-header > h1 {
+header h1 {
     margin: 0;
 }
 
-main {
-    padding-left: 1rem;
-    padding-top: 2rem;
-}
-
-.container.dark-theme {
-    background-color: #0C4A6E;
-    color: #F0F9FF;
-}
-
-.container.light-theme {
-    background-color: #F0F9FF;
-    color: #0C4A6E;
-}
-
+/* Button Styles */
 button {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     cursor: pointer;
@@ -136,22 +102,47 @@ button {
     align-items: center;
     margin-left: 1rem;
     margin-top: 1rem;
+    border: 1px solid;
 }
 
 button:focus {
     outline: none;
 }
 
-button.dark-theme {
-    border: 1px solid #F0F9FF;
-    background-color: #0C4A6E;
-    color: #F0F9FF;
-}
-
 button.light-theme {
-    border: 1px solid #0C4A6E;
-    background-color: #F0F9FF;
-    color: #0C4A6E;
-    
+    border-color: var(--light-text);
+    background-color: var(--light-bg);
+    color: var(--light-text);
 }
 
+button.dark-theme {
+    border-color: var(--dark-text);
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Container Styles */
+.container {
+    height: 100vh;
+}
+
+/* Color Utility Classes */
+.navy {
+    background-color: var(--navy);
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.green {
+    background-color: var(--green);
+}
