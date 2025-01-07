@@ -1,10 +1,9 @@
-import React from 'react'
-
+import { ThemeContext } from "../App"
 function ButtonContext() {
   return (
-    <div>
-      
-    </div>
+    <button>
+        Switch Theme
+    </button>
   )
 }
 
