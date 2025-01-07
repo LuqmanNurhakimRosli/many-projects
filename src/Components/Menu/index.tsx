@@ -1,10 +1,18 @@
 import Menu from './Menu'
 import MenuItem from './MenuItem'
 import MenuButton from './MenuButton'
-import MenuDropDown from './MenuDropDown'
+import MenuDropdown from './MenuDropDown'
 
-Menu.MenuItem = MenuButton
-Menu.MenuDropDown = MenuDropDown
-Menu.Button = MenuButton
+type MenuComponentType = typeof Menu & {
+  Item: typeof MenuItem
+  Button: typeof MenuButton
+  Dropdown: typeof MenuDropdown
+}
 
-export default Menu
+const MenuComponent = Menu as MenuComponentType
+
+MenuComponent.Item = MenuItem
+MenuComponent.Button = MenuButton
+MenuComponent.Dropdown = MenuDropdown
+
+export default MenuComponent

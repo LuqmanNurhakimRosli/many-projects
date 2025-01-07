@@ -1,9 +1,6 @@
 import React from "react"
 import Avatar from "./Components/Avatar"
-import MenuItem from "./Components/Menu/MenuItem"
 import Menu from "./Components/Menu/Menu"
-import MenuDropdown from "./Components/Menu/MenuDropDown"
-import MenuButton from "./Components/Menu/MenuButton"
 import './App.css'
 import Header from "./Components/Header"
 import ButtonContext from "./Components/ButtonContext"
