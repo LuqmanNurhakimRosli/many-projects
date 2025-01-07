@@ -15,6 +15,7 @@ export const useMenuContext = () => useContext(MenuContext)
 function Menu({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
 
+
   const toggle = () => {
     setOpen(!open)
   }

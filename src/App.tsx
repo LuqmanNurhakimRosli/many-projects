@@ -28,12 +28,12 @@ function App() {
         <Header />
         <ButtonContext />
         <Menu>
-          <MenuButton>Sports</MenuButton>
-          <MenuDropdown>
+          <Menu.Button>Sports</Menu.Button>
+          <Menu.Dropdown>
             {sports.map((sport) => (
-              <MenuItem key={sport}>{sport}</MenuItem>
+              <Menu.Item key={sport}>{sport}</Menu.Item>
             ))}
-          </MenuDropdown>
+          </Menu.Dropdown>
         </Menu>
         <Avatar src='/img/marketing_bg.jpg' alt='marketing_bg' />
         <br />
