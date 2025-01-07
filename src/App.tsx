@@ -5,8 +5,10 @@ import MenuDropdown from "./Components/Menu/MenuDropDown"
 import MenuButton from "./Components/Menu/MenuButton"
 
 import './App.css'
+
 function App() {
   const sports = ['Football', 'Basketball', 'Tennis', 'Golf', 'Hockey']
+
   return (
     <>
       <Menu>
