@@ -1,18 +1,22 @@
+import { ReactNode } from 'react'
 import Menu from './Menu'
 import MenuItem from './MenuItem'
 import MenuButton from './MenuButton'
 import MenuDropdown from './MenuDropDown'
 
-type MenuComponentType = typeof Menu & {
+// Define compound component interface
+interface MenuComponent extends React.FC<{ children: ReactNode }> {
   Item: typeof MenuItem
   Button: typeof MenuButton
   Dropdown: typeof MenuDropdown
 }
 
-const MenuComponent = Menu as MenuComponentType
+// Create compound component with proper typing
+const MenuCompound = Menu as MenuComponent
 
-MenuComponent.Item = MenuItem
-MenuComponent.Button = MenuButton
-MenuComponent.Dropdown = MenuDropdown
+// Attach sub-components
+MenuCompound.Item = MenuItem
+MenuCompound.Button = MenuButton
+MenuCompound.Dropdown = MenuDropdown
 
-export default MenuComponent
+export default MenuCompound
