@@ -20,6 +20,7 @@ function App() {
   const [theme, setTheme] = React.useState('light');
   const [text, setText] = React.useState('');
   const [list, setList] = React.useState<string[]>([]);
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setText(e.target.value);
@@ -32,6 +33,7 @@ function App() {
     }
     setList((prevList) => [...prevList, text]);
     setText('');
+    inputRef.current.focus()
   }
 
   function toggleTheme() {
@@ -63,6 +65,7 @@ function App() {
             onChange={handleChange}
             value={text}
             placeholder="Idea"
+            ref={inputRef}
           />
           <button>Submit</button>
         </form>
