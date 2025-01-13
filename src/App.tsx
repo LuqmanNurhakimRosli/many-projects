@@ -18,6 +18,21 @@ const ThemeContext = React.createContext<ThemeContextType>({
 function App() {
   const sports = ['Football', 'Basketball', 'Tennis', 'Golf', 'Hockey'];
   const [theme, setTheme] = React.useState('light');
+  const [text, setText] = React.useState('')
+  const [list, setList] = React.useState([])
+
+  function handleChange(e){
+    setText(e.target.value)
+  }
+
+  function handleSubmit(e){
+    e.preventDefault()
+    if(!text){
+      return
+    }
+    setList(prevList => [...prevList, text])
+    setText('')
+  }
 
   function toggleTheme() {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
@@ -43,6 +58,20 @@ function App() {
         <Avatar />
       </div>
     </ThemeContext.Provider>
+    <h2>React Project Ideas</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          onChange={handleChange}
+          value={text}
+          placeholder="Idea"
+        />
+        <button>Submit</button>
+      </form>
+
+      <ol>
+        {list.map((item, i) => <li key={i}>{item}</li>)}
+      </ol>
   );
 }
 
