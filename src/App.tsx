@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Components/Header';
 import ButtonContext from './Components/ButtonContext';
 import Menu from './Components/Menu/index';
+import Navbar from './Components/Navbar';
 
 interface ThemeContextType {
   theme: string;
@@ -41,6 +42,8 @@ function App() {
   }
 
   return (
+    <>
+    <Navbar />
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`${theme}-theme`}>
         <Header />
@@ -76,6 +79,7 @@ function App() {
         </ol>
       </div>
     </ThemeContext.Provider>
+    </>
   );
 }
 
